@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+
+/*spacing varible*/
+ --space-xs:4px;
+ --space-sm:8px;
+ --space-md:16px;
+ --space-lg:24px;
+ --space-xl:32;
+ --space-2xl:40px;
+ --space-3xl:48px;
+
+ /*border color*/
+ --border-primary-color:hsl(0, 8%, 83%);
+
+ /*border radius*/
+ --border-radius-xm:4px;
+ --border-radius-sm:8px;
+ --borde-radius-md:12px;
+ --border-radius-lg:16px;
+ --border-radius-xl:20px;
+ --border-radius-2xl:24;
+
+ /*
+background color*/
+
+--bg-fill-color:#e4cfcf;
+/*food color*/
+--bg-food-color:lab(51.83% 77.62 63.41);
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+html{
+    background-color: #0c0c0c;
+    color: #f0f0f0;
+}
+main,section{
+ height: 100%;
+ width: 100%;
+}
+.infos{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+section{
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
+    gap:var(--border-radius-lg);
+}
+.info{
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+.board{
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1;/*parent ke andar jo bhi space hain occupic kr lo*/
+    display: grid;
+    grid-template-columns:repeat( auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill, minmax(50px,1fr));
+
+
+}
+
+.block{
+    /*
+    width: 30px;
+    height: 30px;*/
+    border:1px solid var(--border-primary-color);
+    
+}
+.fill{
+    background-color:var(--bg-fill-color);
+}
+.food{
+    background-color: var(--bg-food-color);
+}
