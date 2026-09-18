@@ -43,7 +43,7 @@ html{
     background-color: #0c0c0c;
     color: #f0f0f0;
 }
-main,section{
+main,sectionvar{
  height: 100%;
  width: 100%;
 }
@@ -51,6 +51,20 @@ main,section{
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+
+.btn,.btn2{
+    padding: var(--space-sm)var(--space-md);
+    background-color:var(--bg-fill-color) ;
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover{
+    transform: scale(1.1);
 }
 section{
     padding: var(--space-2xl);
@@ -76,10 +90,9 @@ section{
 }
 
 .block{
-    /*
-    width: 30px;
-    height: 30px;*/
+    
     border:1px solid var(--border-primary-color);
+    border-radius:50%;
     
 }
 .fill{
@@ -87,4 +100,24 @@ section{
 }
 .food{
     background-color: var(--bg-food-color);
+}
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position:fixed;
+    top:0;
+    background-color: #35353587;
+    backdrop-filter: blur(4px);/*modal ke piche jitne bhi element rahenge wo blur ho jayega*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.start-game,.game-over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+.game-over{
+    display: none;
 }
